@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Marvelous comics</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500" rel="stylesheet">
+        <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+
+        <link rel="stylesheet" href="css/owl.carousel.min.css">
+        <link rel="stylesheet" href="css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+
+        <link rel="stylesheet" href="css/aos.css">
+
+        <link rel="stylesheet" href="css/ionicons.min.css">
+
+        <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+        <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+
+        <link rel="stylesheet" href="css/flaticon.css">
+        <link rel="stylesheet" href="css/icomoon.css">
+        <link rel="stylesheet" href="svgMap-master/demo/demo.css">
+        <link rel="stylesheet" href="svgMap-master/dist/svgMap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="svgMap-master/dist/svgMap.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" data-aos="fade-down" data-aos-delay="500">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Marvelous comics</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="oi oi-menu"></span> Menu
+                </button>
+
+                <div class="collapse navbar-collapse" id="ftco-nav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a href="#section-portrait" class="nav-link">Portraits</a>
+                        </li>
+                        <li class="nav-item active"><a href="#section-behavior" class="nav-link">Behavior</a>
+                        </li>
+                        <li class="nav-item active"><a href="#section-diversity" class="nav-link">Diversity</a>
+                        </li>
+                        <li class="nav-item active"><a href="#section-popularity" class="nav-link">Popularity</a>
+                        </li>
+                        <li class="nav-item active"><a href="#section-editors" class="nav-link">Editors</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END nav -->
+
+        <section class="ftco-cover" id="section-home" style="background-image: url(images/top1.jpg)" data-aos="fade"  data-stellar-background-ratio="0.5">
+            <div class="bg-image" style="background-color: rgba(14,14,14,0.4)">
+                <div class="container">
+                    <div class="row align-items-center ftco-vh-100" >
+                        <div class="col-md-12">
+                            <h2 class="h5 ftco-heading mb-3" data-aos="fade-up" data-aos-delay="500" style="color:floralwhite; opacity: 1; font-size: 35px;" >ADAELE Team presents</h2>
+
+                            <h2 class="h5 ftco-heading" data-aos="fade-up"  data-aos-delay="600" style="color:floralwhite; opacity: 1">Marvelous comics: a mirror of society</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->
+
+        
+        <section class="ftco-section" id="section-intro">
+            <div class="container">     
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up">
+                        <p class="mb-4">Superheroes and villains in comics are usually supposed to represent what’s good and bad. Thus, the way the character is portrayed will have an influence on the reader. If for example all villains are part of the same minority, people can unconsciously see them in real life as bad people. On the other hand, children can be inspired by heroes and see in them what they could grow up to be. These are just examples that show how influencial comics are on our society, and in some ways they can even be a representation of it.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="ftco-heading heading-thin">Goal</h1>
+                        <p>This made us wonder how do the two biggest comic books publishers, Marvel and DC comics, choose to portray their characters. In other words, we analyzed the representation of the characteristics of comics characters, how diverse they were and if some of them have a higher tendency to survive over time.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="ftco-heading heading-thin">How we did it</h1>
+                        <p>We wanted to have as much data as possible to have an accurate analysis. So we built our dataset from:</p>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="media block-6">
+                            <div class="media-body">
+                                <h3 class="heading"><span class="counter" >28048</span></h3>
+                                <a href="https://marvel.fandom.com/wiki/Category:Earth-616_Characters" style="color: #990000" onmouseover="this.style.background='#FFFF99';this.style.color='#FF0000';" onmouseout="this.style.background='#990000';this.style.color='#990000';"  target="_blank">
+                                    <p>Marvel Characters</p>
+                                </a>
+                            </div>      
+                        </div>
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="media block-6">
+                            <div class="media-body">
+                                <h3 class="heading"><span class="counter" >49883</span></h3>
+                                <a href="https://marvel.fandom.com/wiki/Category:Comics" style="color: #990000" onmouseover="this.style.background='#FFFF99';this.style.color='#FF0000';" onmouseout="this.style.background='#990000';this.style.color='#990000';"  target="_blank">
+                                    <p>Marvel Comics</p>
+                                </a>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="media block-6">
+                            <div class="media-body">
+                                <h3 class="heading"><span class="counter">22321</span></h3>
+                                <a href="https://dc.fandom.com/wiki/Category:Bad_Characters" target="_blank" class="yourlink" style="color: #0f4c81" onmouseover="this.style.background='blue';this.style.color='blue';" onmouseout="this.style.background='#0f4c81';this.style.color='#0f4c81';">
+                                    <p>DC Characters</p>
+                                </a>
+                            </div>
+                        </div>      
+                    </div>
+                    <div class="col-md-6" data-aos="fade-up">
+                        <div class="media block-6">
+                            <div class="media-body">
+                                <h3 class="heading"><span class="counter" >47380</span></h3>
+                                <a href="https://dc.fandom.com/wiki/Category:Comics" target="_blank" style="color: #0f4c81" onmouseover="this.style.background='blue';this.style.color='blue';" onmouseout="this.style.background='#0f4c81';this.style.color='#0f4c81';">
+                                    <p>DC Comics</p>
+                                </a>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+                <!-- END counter -->
+                
+                <div class="row">
+                    <div class="col-md-12 mb-5" data-aos="fade-up">
+                      <p>This allowed us to collect the attributes of all the characters, but also in what comics and periods of time they appeared in (don<span style="font-family: sans-serif" >'</span>t forget to to click on the colored links above to access directly to the database!).</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                 <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="200">
+                        <h1 class="ftco-heading heading-thin">Notes for this data story</h1>
+                        <p>To write this story, we had to make a few choices. Here they are to make things more clear during the analysis.</p>
+                        <p>First, one of the main aspects of this story is to compare Marvel and DC comics. We thus chose two different colors to denote them: <span style="color: #990000">red</span>
+                        for <span style="color: #990000">Marvel</span>,
+                        and <span style="color: #0f4c81">blue</span>
+                        for <span style="color: #0f4c81">DC</span>.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-8" data-aos="fade-up" data-aos-delay="100" style="margin-top: 0%">
+                        <p>Since we are not interested in characters that only appeared in movies adaptations, we keep only those who are represented in at least one comic book.</p>
+                        <p>Moreover, some characters with the same alias can appear multiple times. This is due to the fact that either Marvel or DC decided to keep the name of the character but changed some attributes. We can for example have more than one character with the alias Iron-Man since different people wore the superhero suit. These people are different in their representation, which made us keep all of them as unique characters even if the alias is the same.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4 mb-5" data-aos="fade-left" data-aos-delay="200" style="margin-top: 1.2%">
+                        <IMG SRC="images/gif1.gif" align="right" width="60%" height="100%"></IMG>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>Marvel storylines happen in different universes, which makes an exact same character appear multiple times. For instance, 
+                        <a href="https://marvel.fandom.com/wiki/Peter_Parker#Alternate_Reality_Versions" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Peter Parker</a>
+                        appear in so many different alternate realities that it would be irrelevant to keep them all. We thus only focused on the characters coming from the 
+                        <a href="https://marvel.fandom.com/wiki/Peter_Parker_(Earth-616)" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Earth-616</a>
+                        universe, the most important one according to the number of appearing characters and comics in it.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <h3>We can now get started!</h3>
+                    </div>
+                </div>
+            </div>    
+        </section>
+        <!-- END section -->
+        
+        
+        <section class="ftco-cover" id="section-portrait" style="background-image: url(images/portraits_cop.jfif)"  data-stellar-background-ratio="0.5">
+            <div class="bg-image" style="background-color: rgba(189,130,115,0.4)">
+                <div class="container">
+                    <div class="row align-items-center ftco-vh-100" >
+                        <div class="col-md-12">
+                            <h1 class="ftco-heading heading-thin mb-5" data-aos="fade-up" data-aos-delay="100" style="color:ghostwhite; opacity: 1">How is a comic character typically portrayed?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->
+        
+        
+        <section class="ftco-section" id="portrait-about">
+           <div class="container">
+                 <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="0">
+                        <h1 class="ftco-heading heading-thin">Guess the portrait!</h1>
+                     </div>
+                 </div>
+                 <div class="row">
+                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 1.7%">
+                        <p>We will start by analyzing the prevailing characteristics over the years. Here are the analyzed attributes: citizenship, marital status, gender, behavior (good, bad or neutral character), occupation, education, height, weight, eyes and hair colors.</p>
+                        <p>Try now to guess what were the most represented characteristics for Marvel and DC characters in 2019! Hover over the cards on the right to get the answer!</p>
+                        <p>The portraits seem quite similar actually, even if DC and Marvel imagine their characters completely apart from each other, and the portraits also seem quite generic.</p>
+                    </div>
+                    <div class="col-md-4 col-lg-4"  data-aos="fade-up" data-aos-delay="0">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front" style="background-color:#0F4C81;background-image: url(images/Batman.png); ">
+                                    <div class="box">
+                                        <h2>DC Comics</h2>
+                                    </div>
+                                </div>
+                                <div class="back" style="background:#0F4C81"> <!-- back content -->
+                                    <blockquote>
+                                        <p>2019 portrait:</p> <p><br /> <br />Single <br />Male <br />Good <br />American <br /> Criminal <br /> College <br />1m80 <br /> 86kg <br /> Blue eyes <br /> Black hair
+                                    </blockquote>
+                                    <div class="author d-flex">
+                                        <div class="image mr-3 align-self-center">
+                                            <img src="images/Batman.png" alt="">
+                                        </div>
+                                        <div class="name align-self-center">DC Comics</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .flip-container -->
+                    </div>
+                    
+                    <div class="col-md-4 col-lg-4"  data-aos="fade-up" data-aos-delay="0">
+                        <div class="flip-container">
+                            <div class="flipper">
+                                <div class="front" style="background-color:#990000;background-image: url(images/captain_america_left.png);">
+                                    <div class="box">
+                                        <h2>Marvel Comics</h2>
+                                    </div>
+                                </div>
+                                <div class="back" style="background:#990000">
+                                    <!-- back content -->
+                                    <blockquote>
+                                        <p>2019 portrait:</p> <p><br /> <br />Single <br />Male <br />Good <br />American <br /> Student <br /> College <br />1m83 <br /> 82kg <br /> Brown eyes <br /> Black hair
+                                    </blockquote>
+                                    <div class="author d-flex">
+                                        <div class="image mr-3 align-self-center">
+                                            <img src="images/captain_america_left.png" alt="">
+                                        </div>
+                                        <div class="name align-self-center">Marvel Comics</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- .flip-container -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="ftco-heading heading-thin">What does the data say?</h1>
+                        <p>Let<span style="font-family:sans-serif">'</span>s now look at the data with more depth. Have you ever wondered where did the comics characters come from? Well here<span style="font-family: sans-serif">'</span>s the (not very surprising) answer:</p>
+                    </div>
+               </div>
+               <div class="row" data-aos="fade-up" data-aos-delay="200">
+                   <div class="col-md-12 col-lg-12">
+                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~Ahko26/1.embed?showlink=false" height="525" width="100%"></iframe>
+                   </div>
+               </div>
+               <div class="row" data-aos="fade-up" data-aos-delay="100">
+                   <div class="col-md-12 col-lg-12 mb-5">
+                       <p>The map speaks by itself. The USA are without any doubt the country where most of the characters are citizens. This is indeed not very surprising since most of the events happen there, which makes sense considering the fact that Marvel and DC comics are American publishers. But three other countries seem to stand out compared to the rest of the world, Russia, Germany and China. This can be explained by war-related issues. Indeed, many events in the comic books happened during the world wars or the cold war, which led to the creation of many stories with multiple villains (for example:             <a href="https://marvel.fandom.com/wiki/Nazi_Germany_(Earth-616)" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Nazis</a>) and heroes (<a href="https://dc.fandom.com/wiki/Leonid_Kovar_(New_Earth)" target="_blank" style="color: #0F4C81" onmouseover="this.style.background='';this.style.color='blue';" onmouseout="this.style.background='';this.style.color='#0F4C81';">Red Star</a>, a russian superhero who was a "super-agent" for the KGB).</p>
+                       <p>A few things about this map. Some characters have multiple citizenships, and since we didn<span style="font-family: sans-serif">'</span>t want to discard any data, we considered the citizenships as unique, i.e. if a character is french and russian, we increase the value of characters citizenships for both France and Russia. Moreover, many characters don<span style="font-family: sans-serif">'</span>t come from earth. Thus their citizenship isn<span style="font-family: sans-serif">'</span>t represented on this map.</p>
+                   </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="ftco-heading heading-thin">What about the other attributes?</h1>
+                        <p>Here<span style="font-family: sans-serif">'</span>s the most appearing types of attributes over time, feel free to explore the data and hover over graphs to display the exact values (you can also click on the legend to choose what category you want to show). The first type of graphs shows the global evolution of dominant categories for all attributes over time. If you want to see exactly the distribution for a specific year, you can refer to the histogram below.</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/97.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100"> 
+                        <div id="genplot">                            
+                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/311.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                       </div>
+
+                        <button id="btnmar" onclick="showmar()">Marital status</button>
+                        <button id="btngen" onclick="showgen()">Gender</button>
+                        <button id="btnbeh" onclick="showbeh()">Behavior</button>
+                        <button id="btncit" onclick="showcit()">Citizenship</button>
+                        <button id="btnocc" onclick="showocc()">Occupation</button>
+                        <button id="btnedu" onclick="showedu()">Education</button>
+                        <button id="btnhei" onclick="showhei()">Height</button>
+                        <button id="btnwei" onclick="showwei()">Weight</button>
+                        <button id="btneye" onclick="showeye()">Eyes</button>
+                        <button id="btnhair" onclick="showhair()">Hair</button>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
+                        <p>One first interesting thing to notice is that the prevailing characteristics in the early years of Marvel and DC kept being the most used ones over the years. For instance, the two most used eyes colors are blue and brown. And it was the case from the very first characters until nowadays. This suggests that the typical portrait over years isn<span style="font-family: sans-serif" >'</span>t really changing, and that Marvel and DC were kind of stuck in the earlier character representations they had. So basically, it seems that the average comic character is and will forever be an 80 kg-American man, 1m80 tall, blue-eyed and black-haired single superhero, ready to save everyones lives. This doesn<span style="font-family: sans-serif" >'</span>t really look like the creative comics characters we know about, does it?</p>
+                        <p>Let<span style="font-family: sans-serif" >'</span>s now pay attention to the genders proportions evolution. Even if male characters are still largely used, their proportion is decreasing with time. We can clearly see how the male and female curves are leaning towards 50%, the first one decreasing and the second one increasing. If we put the graph in log-scale, more interesting results appear: the proportion of other represented genders like agender is (very) slowly increasing, or is at least starting to have more regular appearances.</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100"> 
+                       <p>So it seems on one hand that almost one exact same portrait is prevailing for both Marvel and DC. But on the other hand, some categories are more and more represented, but it takes time to have a high proportion. We saw the latter with the genders, but why wouldn<span style="font-family: sans-serif" >'</span>t it be the same for the other attributes? Funny thing with data: the more you explore it, the more you unravel its hidden secrets, so let<span style="font-family: sans-serif" >'</span>s dig deeper!</p>
+                   </div>
+               </div>
+            </div>
+        </section>
+        <!-- END section -->        
+        
+        
+       <section class="ftco-cover" id="section-behavior" style="background-image: url(images/dcbad.jpg)"  data-stellar-background-ratio="0.5">
+            <div class="bg-image" style="background-color: rgba(14,40,92,0.4)">
+                <div class="container">
+                    <div class="row align-items-center ftco-vh-100" >
+                        <div class="col-md-12">
+                            <h1 class="ftco-heading heading-thin mb-5" data-aos="fade-up" data-aos-delay="100" style="color:ghostwhite; opacity: 1">How does a character<span style="font-family: sans-serif" >'</span>s behavior define his portrait?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->
+        
+        
+        <section class="ftco-section" id="behavior-about">
+           <div class="container">
+                 <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>Sometimes, if you choose to analyze the hole data as it is, you might miss interesting phenomena. We tried to split our portrait analysis according to the behavior attribute, which means that we study the characteristics for good, bad and neutral characters.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h1>Different roles, different portraits</h1>
+                        <p>The following histogram displays the most represented characteristics for the previously studied attributes, with the proportion of good, bad and neutral characters. Let<span style="font-family: sans-serif" >'</span>s see if they are all represented in the same way (and don<span style="font-family: sans-serif" >'</span>t forget to hover over the graph to see the exact proportions).</p>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">                            
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/375.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>Some attributes show a clear separation depending on the character<span style="font-family: sans-serif" >'</span>s behavior, which means that some characteristics are more likely to be attributed to a good than a bad character (or the contrary). Let<span style="font-family: sans-serif" >'</span>s for example see the education attribute. For most of the categories, the proportion of bad characters is lower than 25%. This is actually a good thing since an image is conveyed here: superheroes have generally pursued education. Take the example of <a href="https://marvel.fandom.com/wiki/Anthony_Stark_(Earth-616)" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Iron-man</a>: he went to MIT and have multiple PhDs. If young readers see him as a hero, they can be inspired and try to pursue an engineering career for example. Of course, this can also have a negative impact for people who couldn<span style="font-family: sans-serif" >'</span>t, for some reason, access to high level of education or even to college, who would see a correlation between being good and having a high education.</p>
+                        <p>And what if some more random correlations exist between a behavior and an attribute? Try to look at the hair color distribution. It seems that for both Marvel and DC, approximately half of bald people are villains. Calm down, this is probably not a conspiracy theory with a hidden message from the comics creators. It could however create some unintentional connections in the readers mind. This can actually help the writers to more easily show the evilness of a character, but it can also reduce the diversity of good characters and define two different portraits depending on the behavior.</p>
+                        <p>As we did previously, let<span style="font-family: sans-serif" >'</span>s add time evolution to our plots and see what happens.</p>
+                    </div>
+                </div>
+                <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="300"> 
+                        <div id="goodbadplot">                            
+                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/24.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                       </div>
+
+                        <button id="btnmar" onclick="showmar1()">Marital status</button>
+                        <button id="btngen" onclick="showgen1()">Gender</button>
+                        <button id="btncit" onclick="showcit1()">Citizenship</button>
+                        <button id="btnocc" onclick="showocc1()">Occupation</button>
+                        <button id="btnedu" onclick="showedu1()">Education</button>
+                        <button id="btneye" onclick="showeye1()">Eyes</button>
+                        <button id="btnhair" onclick="showhair1()">Hair</button>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-8  mb-5" data-aos="fade-up" data-aos-delay="100" style="margin-top: 1.2%"> 
+                       <p>If we look at the evolution of characters citizenships over time, we can see that some periods can be recognized. This is especially the case for the world wars periods which also correspond to the first Marvel and DC comic books: almost all Japanese, Italian and German characters were villains. So the separation becomes more and more clear: superheroes come from America to fight the evilness of Germany and Japan. In times of war, soft power had an impact on citizens, and the US have always tried to convey an image of strength and superiority over the enemies. This phenomenon was observed in many movies, and it is logical to also find it in comic books. However, this portrait didn<span style="font-family: sans-serif" >'</span>t really disappear. We can see even years after the wars were over that German characters were still mostly associated to bad characters, which as said before, can sometimes lead the reader to have some unconscious thoughts about German people.</p>
+                   </div>
+                    <div class="col-md-4 col-lg-4 mb-5" data-aos="fade-left" data-aos-delay="100" style="margin-top: 0%">
+                            <IMG SRC="images/gif4.gif" align="right" width="100%" height="100%"></IMG>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-12 mb-5" data-aos="fade-up" data-aos-delay="100" style="margin-top: 0%">
+                        <p>It is clear that all these conclusions must be said cautiously. Sometimes the proportion of good or bad characters is high, but the total number of characters with this category is relatively low. If we look at the evolution of genderfluid characters, we see that they are generally villains. However, the number of genderfluid characters is so small compared to the other genders that we can<span style="font-family: sans-serif" >'</span>t really jump into any conclusion.</p>   
+                    </div>
+               </div>
+            </div>
+        </section>
+        
+        
+        
+       <section class="ftco-cover" id="section-diversity" style="background-image: url(images/dividedcro.jpg)"  data-stellar-background-ratio="0.5">
+            <div class="bg-image" style="background-color: rgba(189,130,115,0.4)">
+                <div class="container">
+                    <div class="row align-items-center ftco-vh-100" >
+                        <div class="col-md-12">
+                            <h1 class="ftco-heading heading-thin mb-5" data-aos="fade-up" data-aos-delay="100" style="color:ghostwhite; opacity: 1">How diverse are the comics characters attributes?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->
+        
+        
+        <section class="ftco-section" id="diversity-about">
+            <div class="container">
+                 <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <p>We will now try a different approach. Instead of looking at the most represented categories, let<span style="font-family: sans-serif" >'</span>s analyze the total number of used categories for each year over time. This means that we only take into account the diversity for a specific year, without considering what happened in the years before.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="200"> 
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~Ahko26/16.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                   </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
+                        <h1>New year, new characters</h1>
+                        <p>Globally, more and more characters are used in comics each year, and it<span style="font-family: sans-serif" >'</span>s the case for both Marvel and DC. We can even see some peaks over a few years which may have different reasons behind them. We can for instance see that in the 1973-1976 period, the number of used characters in the Marvel comics has really increased. This can be explained by the fact that 5 editors-in-chief succeeded each other during that period, and each one of them probably wanted to develop Marvel as much as possible by creating new characters.</p> 
+                        <p>But after seeing the increasing number of used characters each year, one musn<span style="font-family: sans-serif" >'</span>t quickly jump into conclusions. Indeed, more characters each year doesn<span style="font-family: sans-serif" >'</span>t necessarily mean diversity. We can logically think that comics characters won<span style="font-family: sans-serif" >'</span>t be used for only a few years and then be abandoned. Storylines can last for so long if they are successfull, see the example of <a href="https://dc.fandom.com/wiki/Kal-L_(Earth-Two)" target="_blank" style="color: #0f4c81" onmouseover="this.style.background='';this.style.color='blue';" onmouseout="this.style.background='';this.style.color='#0f4c81';">Superman</a>, one of the first DC superheroes (1938) and still amongst the most famous ones today (we'll talk about popularity with more details in the next section).</p>
+                        <p>Let<span style="font-family: sans-serif" >'</span>s clarify this with another graph: the distribution of 1st year appearance of characters for a selected year. This means that if you choose for instance 1980 with the slider, you<span style="font-family: sans-serif" >'</span>ll see the proportion of used characters in 1980 that appeared from the beginning of Marvel and DC Comics until that selected year (1980). But less talking and more plotting, let<span style="font-family: sans-serif" >'</span>s look at the graph.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="300"> 
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/336.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="200">
+                        <p>The first observation is that all along the timeline and even for the most recent years, characters from all the previous years are still used. This confirms our previous hypothesis: even if the number of characters increases over time, many of them were already created before. But the question is how many?</p>
+                        <p>Changing the plot to a linear scale gives another point of view. Indeed, we can see that the distribution is left-skewed, which means that the majority of used characters for a specific year were actually created at maximum 2 to 3 years before, which means that they are relatively new. To go further with the diversity analysis, we must go back to the previous graph to see the evolution of the number of categories for the other attributes, which will tell us how different these newly created characters are.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
+                        <h1>Diversity or older copies?</h1>
+                    </div>
+                    <div class="col-md-4 col-lg-4 mb-5" data-aos="fade-right" data-aos-delay="100" style="margin-top: 0%">
+                            <IMG SRC="images/gif2.gif" align="right" width="100%" height="100%"></IMG>
+                    </div>
+                    <div class="col-md-8 col-lg-8  mb-5" data-aos="fade-up" data-aos-delay="100" style="margin-top: 1.8%">
+                        <p>We can actually see two different tendencies for the two comics publishers. Overall, the number of used categories each year for DC is globally the same, whereas Marvel continuously increases it. We can indeed see that they sometimes have hundreds of different categories for attributes like citizenship, education or even eyes color.</p>
+                        <p>Thus, even though the top categories were the same over years, increasing the total number of categories has probably created diversity. Indeed, if the number of categories for one year is higher than the previous one, they are most likely to be new ones. On the other hand, even if DC has kept a constant number of used categories, we can<span style="font-family: sans-serif">'</span>t for sure say that they aren<span style="font-family: sans-serif">'</span>t new ones, but we can just suppose that it might create less diversity in their characters compared to Marvel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->   
+        
+       
+        <section class="ftco-cover" id="section-popularity" style="background-image: url(images/marveldc.jpg)"  data-stellar-background-ratio="0.5">
+            <div class="bg-image" style="background-color: rgba(14,40,92,0.4)">
+                <div class="container">
+                    <div class="row align-items-center ftco-vh-100" >
+                        <div class="col-md-12">
+                            <h1 class="ftco-heading heading-thin mb-5" data-aos="fade-up" data-aos-delay="100" style="color:ghostwhite; opacity: 1">What makes a comic character popular?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->
+        
+        
+        <section class="ftco-section" id="popularity-about">
+            <div class="container">
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100"> 
+                       <p>When we say Marvel and DC, people tend to only think about the <a href="https://marvel.fandom.com/wiki/Avengers_(Earth-616)" target="_blank" style="color: #990000" onmouseover="this.style.background='';this.style.color='#FF0000';" onmouseout="this.style.background='';this.style.color='#990000';">Avengers</a> or <a href="https://dc.fandom.com/wiki/Batman_(Bruce_Wayne)" target="_blank" style="color: #0f4c81" onmouseover="this.style.background='';this.style.color='blue';" onmouseout="this.style.background='';this.style.color='#0f4c81';">Batman</a>, but we said in the very beginning that there were more than 50 000 characters in total! So what happens to the less famous ones? Let<span style="font-family: sans-serif" >'</span>s try to link a character<span style="font-family: sans-serif" >'</span>s popularity to his portrait.</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">  
+                       <h1>To be (famous) or not to be</h1>
+                       <p>Saying that a comic character is famous or not might greatly depend on who is to answer the question. To avoid any subjectivity in our analysis, we tried to formulate a mathematical way to compute a "famousness score" (oh no math!). Please don<span style="font-family: sans-serif" >'</span>t be scared, we won<span style="font-family: sans-serif" >'</span>t get into details here. For the most interested you can check the notebook in the bottom of the page where everything is explained. For the others, let<span style="font-family: sans-serif" >'</span>s just say that this score is an arithmetic mean based on the longevity (time between first and last appearance) and the number of appearances of a character. This way, if a character appeared a few times but over a long period, he would get a low appearance score. And on the contrary, if a character appeared many times but on a short period of time, we would have a low longevity score. Since the famousness is based on both scores, a famous character has to appear a high number of times and over a long period.</p>
+                       <p>We decided to split the famousness into three equally divided categories: forgotten (0 &lt; famousness &lt; 33), intermediate (33 &lt; famousness &lt; 66) and famous (66 &lt; famousness &lt; 100). The following histogram shows in what categories the different characters are.</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                          
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/302.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                       <p>The first thing to notice is the that the number of characters decreases with the famousness score, which means that many characters are forgotten and a few are famous. Moreover, this plot is in logarithmic scale so the difference between famousness categories is actually bigger than visualised on the graph: only 3% of the Marvel and DC characters are considered as famous with our score. In other words, the reason that you remember only a few characters is because Marvel and DC made things that way.</p>
+                       <p>One can wonder why so many characters were forgotten, and a way to see this is to analyze the portraits depending on the behavior.</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                             
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/43.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">   
+                       <p>First, we can see that the most displayed behavior per attribute is the intermediate one. The reason that we don<span style="font-family: sans-serif" >'</span>t see so many famous characters in the categories is because they are 5 times fewer than characters with an intermediate famousness score. However, if we have the same reasoning, we could expect to see much more forgotten characters since they constitute almost 78% of all characters. But as their famousness score says, these characters are forgotten. This can be due to the fact that the way they were portrayed didn<span style="font-family: sans-serif" >'</span>t have that much success. And since we<span style="font-family: sans-serif" >'</span>re only showing the most used categories here, we won<span style="font-family: sans-serif" >'</span>t be able to see that many characteristics of characters with a low score. Let<span style="font-family: sans-serif" >'</span>s see if isolating periods of time will help us understand what happened.</p>
+                   </div>
+                </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100"> 
+                        <div id="popplot">                            
+                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/52.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                       </div>
+
+                        <button id="btnmar" onclick="showmar2()">Marital status</button>
+                        <button id="btngen" onclick="showgen2()">Gender</button>
+                        <button id="btncit" onclick="showcit2()">Citizenship</button>
+                        <button id="btnocc" onclick="showocc2()">Occupation</button>
+                        <button id="btnedu" onclick="showedu2()">Education</button>
+                        <button id="btneye" onclick="showeye2()">Eyes</button>
+                        <button id="btnhair" onclick="showhair2()">Hair</button>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                       <h1>Time to shine</h1>
+                       <p>Actually, a few attributes like citizenship, occupation or hair color, have a relatively high proportion of characters with a low famousness score represented in the earlier periods of time (especially Marvel in 1939-1943). Moreover, this proportion tend to decrease over time and leave place for more famous characters. What we see here is simply the experience that Marvel and DC writers gained over time. The first portraits they designed might not have been very successful, and after trying different combinations over the years, they kind of found the "magic formula" to create popular characters. Of course, this is not a generality and also probably not the only reason we have this distribution.</p>
+                       <p>If we pay attention to the citizenship attribute, we can observe a high rate of forgotten characters born in Germany and Japan. We saw previously in the behavior section that in periods of war, many villains were born in these countries. But actually these bad characters aren<span style="font-family: sans-serif" >'</span>t that famous, and people won<span style="font-family: sans-serif" >'</span>t really remember them. So maybe after the world wars have ended, readers didn<span style="font-family: sans-serif" >'</span>t relate to those villains anymore which made them unpopular, and thus writers tried other portraits for villains. We can carefully extend this principle to other attributes and famousness scores, see for example how since the very first characters, popular ones had blue eyes.</p>
+                       <p>More generally, Marvel and DC tried to adapt their characters to the readers by seeing which ones were most popular. This made the portraits change over time, until great combinations were found to be more successful. You can see in the following graph the characters with the highest famousness score.</p>
+                   </div>
+               </div>
+               <div class="row">
+                   <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">                            
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~Ahko26/71.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+               </div> 
+                <p>We can guess a typical portrait for successful characters. Men occupy the highest ranks (the first female character only comes at the 13th place). Almost all of them are American and have blue eyes, which we can relate to what was said previously. This doesn<span style="font-family: sans-serif" >'</span>t mean that any character with these characteristics will be successfull, but it however seems that the most famous ones have very similar portraits.</p>
+            </div>
+        </section>
+        <!-- END section -->       
+        
+        
+        <section class="ftco-cover" id="section-editors" style="background-image: url(images/stan.jpeg)"  data-stellar-background-ratio="0.5">
+            <div class="bg-image" style="background-color: rgba(189,130,115,0.4)">
+                <div class="container">
+                    <div class="row align-items-center ftco-vh-100" >
+                        <div class="col-md-12">
+                            <h1 class="ftco-heading heading-thin mb-5" data-aos="fade-up" data-aos-delay="100" style="color:ghostwhite; opacity: 1">What about the writers and editors?</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section -->
+        
+        
+        <section class="ftco-section" id="editors-about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up">
+                        <p>Our research would be incomplete if we didn<span style="font-family: sans-serif" >'</span>t analyze those who give life to all these characters: the writers and editors. They are the key people in the development of comics stories and characters. The attributes we had access to are the gender and the periods of activity which were deduced from the comics (of course since the data is never perfect, some editors and writers don<span style="font-family: sans-serif" >'</span>t have these attributes mentionned).</p>
+                        <p>To make the following distributions, we computed the total number of comics edited and written grouped by gender (example: 200 comics in total, 180 of them edited by men and 20 by women, and the same for writers). This will let us see what gender seems to prevail for the comics creators, and later on wonder on the impact its has on the created characters.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="ftco-heading heading-thin">Gender imbalance.<span style="font-size: 5px"> </span>.<span style="font-size: 5px"> </span>.</h1>
+                        <p>Looking at the editors gender distribution down below, we see that for both Marvel and DC comics, there were almost 100% male editors until the 80<span style="font-size: 10px">s</span>. You can hover over the graph to see the exact number of publications and its corresponding proportion.</p>
+                        <p>But starting from that period, we observe that more women became editors-in-chief. This is a direct consequence of the 70<span style="font-size: 10px">s</span>, a period of time when women started to massively go to colleges and graduate schools in the US (known as women<span style="font-family: sans-serif">'</span>s quiet revolution). However, two tendencies are to distinguish between the two comics publishers. DC saw its number of publications edited by women be more and more consistent especially after the 90<span style="font-size: 10px">s</span>. It even reached the point where it exceeded the proportion of male editors. Whereas for Marvel, apart from very few years, 100% of the editors were men.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/423.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <p>Let<span style="font-family: sans-serif" >'</span>s have a closer look at the periods of activity. Generally, an editor-in-chief stays at least for a few months, and many of them occupied their post for many years. Thus there are relatively a few number of editors. The two following timelines will help us understand the previous results. Please note that the displayed names don<span style="font-family: sans-serif">'</span>t constitute the hole list of editors, otherwise it wouldn<span style="font-family: sans-serif">'</span>t be convenient to read. You can however see the hole data, and if you hover over the periods of activity, you<span style="font-family: sans-serif">'</span>ll see the corresponding editor name. You can moreover double click on one category to display it on its own. Finally, if an editor<span style="font-family: sans-serif">'</span>s gender is marked as "unknown", it means that it wasn<span style="font-family: sans-serif">'</span>t specified in the data.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/464.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/468.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <p>These timelines give us interesting results. We can see that female editors for Marvel never stayed more than 3 years, which compared to men that have a much longer activity period, explains why there are less comics edited by women. On the opposite, some DC female editors had the opportunity to stay as editors-in-chief for more than 8 years, like <a href="https://dc.fandom.com/wiki/Karen_Berger" target="_blank" style="color: #0f4c81" onmouseover="this.style.background='';this.style.color='blue';" onmouseout="this.style.background='';this.style.color='#0f4c81';">Karen Berger</a> (20 years!). Putting this in parallel with the previous graphs, it can explain why DC had a higher proportion of comics edited by women.</p>
+                        <p>Still, the number of editors is limited. So before relating this to the comics characters, let<span style="font-family: sans-serif">'</span>s see what the writers have to say.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <h1 class="ftco-heading heading-thin">.<span style="font-size: 5px"> </span>.<span style="font-size: 5px"> </span>.or lack of data?</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-lg-4 mb-3" data-aos="fade-right" data-aos-delay="100" style="margin-top: 0%">
+                        <IMG SRC="images/gif6.gif" align="right" width="100%" height="100%"></IMG>
+                    </div>
+                    <div class="col-md-8 col-lg-8  mb-3" data-aos="fade-up" data-aos-delay="100" style="margin-top: 2%">
+                        <p>So actually, the number of editors-in-chief is relatively low as we saw in the previous timelines. It is on the other hand different for writers, there are much more of them than editors. Even for one comic book there can be multiple writers. This means more data to look at, and more data means more categories! So let<span style="font-family: sans-serif">'</span>s see what we<span style="font-family: sans-serif">'</span>ve got.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/432.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-2" data-aos="fade-up" data-aos-delay="100">
+                        <p>Well, good news and bad news. As always, bad news first. The observed problem is that even if the percentage of women writers isn<span style="font-family: sans-serif">'</span>t always 0% (comparing Marvel female editors and writers for example), the proportion is still low compared to men. Indeed, the highest observed percentage for both Marvel and DC is barely 8.5%, and we can<span style="font-family: sans-serif">'</span>t even see the tendency increasing over years. This unbalance can affect the creative process that leads to the choice of the portrait for comics characters. Of course, one can not say with certainty that writers will create characters based on their own characteristics, but the influence can still be felt: there are more male characters and more male writers and editors than female, and the two variables are likely to be correlated.</p>
+                        <p>The good news is that the Marvel writers gender distribution is more diverse than the editors one. We can actually see the emergence of other genders than male or female like non-binary, especially in the very recent years (you can double click on the category to see it with more details). This can also be put in parallel with the comics characters genders. Indeed, these writers that are part of gender minorities can try to create diversity for the characters. This may also be related to the recent emergence of new genders that we observed in the very beginning of this analysis. However, it might take time to see these other genders take a bigger part in the comics characters, and a start could be to have writers and editors with more diverse genders.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- END section --> 
+
+
+        <div class="ftco-section bg-light">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-5">
+                    <div class="col-md-10 text-center"  data-aos="fade-up">
+                        <h1>Final words</h1>
+                        <p>Let<span style="font-family: sans-serif" >'</span>s sum up what we have seen during this analysis. Some characteristics seem to be much more used than others, and it is sometimes the case since the first comics. However, we were able to associate these characteristics to the type of character. Whether he is a villain or a hero, or based on how popular he is, the character<span style="font-family: sans-serif" >'</span>s portrait might be different. These differences create diversity, but we also saw that famous characters tend to have similar portraits. Thus we had to question ourselves about the impact of editors and writers on the characters creation process. Maybe the gender imbalance we observed has influenced this choice, and diversity for the creators can lead to more diverse characters.</p>
+                        <p>More generally, we saw that some interesting conclusions could be made on this dataset. Even if the characters aren<span style="font-family: sans-serif" >'</span>t real, they can have an impact in some way on the reader and on the way he sees real people with the same characteristics as comics characters. This impact could be either positive or negative, and can<span style="font-family: sans-serif" >'</span>t be generalized, but can still be present.</p>
+                        <p>Let<span style="font-family: sans-serif" >'</span>s finally say that all the analysis is based on what was seen by means of the gathered data. Since it could be incomplete or vague, we can never be 100% sure about the conclusions, and this is why we always have to be careful when doing this kind of analysis.</p>
+                    </div>
+                </div>
+                <div class="row justify-content-center mb-5 pb-5">
+                    <div class="col-md-10 text-center"  data-aos="fade-up">
+                        <p>This project was made as part of the course of "Applied data analysis" in EPFL.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <footer class="ftco-footer ftco-bg-dark ftco-section">
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-4 text-center">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">The team</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="https://www.linkedin.com/in/ahmedkooli/" class="py-2 d-block" target="_blank">Ahmed Kooli</a></li>
+                                <li><a href="https://www.linkedin.com/in/antoine-schmider-900778155/" class="py-2 d-block" target="_blank">Antoine Schmider</a></li>
+                                <li><a href="https://www.linkedin.com/in/jordan-metz/" class="py-2 d-block" target="_blank">Jordan Metz</a></li>
+                                <li><a href="https://www.linkedin.com/in/pierre-louis-gaudilliere-8597b8105/" target="_blank" class="py-2 d-block">Pierre Louis Gaudillière</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <div class="ftco-footer-widget mb-4">
+                            <h2 class="ftco-heading-2">Useful links</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="https://github.com/PierreLouisG/project_ADAELE" target="_blank" class="py-2 d-block">Notebook the with results</a></li>
+                                <li><a href="https://github.com/marvelous-comics/marvelous-comics.github.io" target="_blank" class="py-2 d-block">This website</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+
+                        <p style="font-size: 12px"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy; 2019 All rights reserved | Template made by <a href="https://colorlib.com" target="_blank" class="text-primary">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- loader -->
+        <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+        <script src="js/jquery.min.js"></script>
+        <script src="js/jquery-migrate-3.0.1.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.easing.1.3.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.stellar.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/aos.js"></script>
+        <script src="js/jquery.animateNumber.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+        <script src="js/google-map.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+        <script src="js/plots.js"></script>
+        <!--counter-->
+        <script src="js/jquery.counterup.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+        <script>
+            jQuery(document).ready(function( $ )
+                                   {
+                $('.counter').counterUp({
+                    delay: 10,
+                    time: 2000
+                });  
+            });
+        </script>
+        
+        <script>
+        function showmar() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/311.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+    
+
+        
+        <script>
+        function showgen() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/316.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showbeh() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/372.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showcit() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/324.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showocc() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/332.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showedu() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/334.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showhei() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/342.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showwei() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/354.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showeye() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/368.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showhair() {
+          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/370.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        
+        
+        <script>
+        function showmar1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/24/.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showgen1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/5.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showcit1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/28.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showbir1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/30.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showocc1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/2.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showedu1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/26.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showeye1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/9.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showhair1() {
+          document.getElementById("goodbadplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/7.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        
+        
+        <script>
+        function showmar2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/52/.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showgen2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/54.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showcit2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/60.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showbir2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/50.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showocc2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/46.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showedu2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/48.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showeye2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/56.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script>
+        
+        <script>
+        function showhair2() {
+          document.getElementById("popplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~pgaudill/58.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        }
+        </script> 
+    
+        
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
