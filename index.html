@@ -161,45 +161,66 @@
                      </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 1.7%">
-                        <p>We first look at the data from the United States Census website by plotting the trend of the trade.</p>
-                        <p>Given the plot above, we observe that:</p>
+                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 3.7%">
+                        <p>We first look at the data from the United States Census website by plotting the trend of the bilateral trade, from 2016 to 2020.</p>
+                        <p>Given the plot, we can observe that:</p>
                         <ul>
-                            <li>US imports from China are much higher than its exports. The US trade deficit in bilateral trade is approximately 30 billion dollars per month.</li>
-                            <li>U.S. imports from China fluctuate greatly each month and show a certain degree of cyclical characteristics.</li>
-                            <li>After 2020, monthly trade volume has changed greatly.</li>
+                            <li>US imports from China are much higher than its exports. The <b>US trade deficit</b> in bilateral trade is approximately 30 billion dollars per month.</li>
+                            <li>U.S. imports from China fluctuate greatly each month and show a certain degree of <b>cyclical characteristics</b>.</li>
+                            <li>In 2020, monthly trade volume has changed greatly.</li>
                         </ul>
                     </div>
-                    <div class="image mr-3 align-self-center" data-aos="fade-up">
-                        <img src="images/trend_of_trade.png" alt="">
+                    <div class="col-md-8 col-lg-8" data-aos="fade-up" data-aos-delay="0">
+                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/bilateral_overview.html" height="500" width="100%"></iframe>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
-                        <h1 class="ftco-heading heading-thin">Trade war outbreak analysis: First trial</h1>
+                        <h2 class="ftco-heading heading-thin">Trade war outbreak analysis: Data Preprocesing</h2>
                         <p>
-                            Firstly, according to the circumstance (3), we infer that COVID-19 pandemic has greatly impacted the bilateral trade. 
+                            Firstly, according to the observation above, we infer that <b>COVID-19 pandemic</b> has greatly impacted the bilateral trade. 
                             Also, in 2020 Jan 15, U.S. President Donald Trump and China's Vice Premier Liu He signed the US–China Phase One trade deal in Washington DC. 
                             This agreement marked a phased settlement of the trade war.
                         </p>
                         <p>
                             According to the two factors above, we think that the trade amount in 2020 do not help to investigate the trade war's impacts because it's hard to control the variable. 
                             The pandemic may be the cause of sharp decrease in US imports but the agreement could lead to the following increasing tread. 
-                            Hence, we focus our research on year 2016-2019, which is also the main period of the trade war. 
+                            Hence, we focus our research on year <b>2016-2019</b>, which is also the main period of the trade war. 
                         </p>
                         <p>
-                            Let's forget about the crazy and miserable 2020 in this research!
+                            Secondly, we carry out <b>seasonality decomposition</b> to analyze the cyclical characteristics in the trade amount.
+                            The following decomposition results indicate the significant seasonality in the trade data, especially in imports.
+                            Thus, in the final trade war outbreak analysis, we remove the seasonality to better analyze the real impact of the trade war intervention.
                         </p>
                     </div>
                 </div>
                 <div class="row" data-aos="fade-up" data-aos-delay="200">
                     <div class="col-md-6">
-                        <img src="images/import_vs_global.png" alt="" class =“right” style="width:100%">
+                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/imports_seasonality.html" height="500" width="100%"></iframe>
                     </div>
                     <div class="col-md-6">
-                        <img src="images/export_vs_global.png" alt="" style="width:100%">
+                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/exports_seasonality.html" height="500" width="100%"></iframe>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="ftco-heading heading-thin">Trade war outbreak analysis: With global trade as comparator group</h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 3.7%">
+                        <p>To strengthen the analysis on the impact of trade-war outbreak, we select Monthly International Merchandise Trade as a comparator group. This index reflects the monthly <b>global trade amount </b>.</p>
+                        <p>From the trend plot, we observe that the increasing trend was also slowed down in 2018 and gradually decrease in the next years. Since the global trend <b>shares kind of similarity</b> with China-US bilateral trade trend, we cannot directly conclude that trade-war leads to the decline in rather than global economic recession.</p>
+                    </div>
+                    <div class="col-md-8 col-lg-8" data-aos="fade-up" data-aos-delay="0">
+                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/global_overview.html" height="500" width="100%"></iframe>
+                    </div>
+                </div>
+
+
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-md-12 col-lg-12 mb-5">
                         <p>
