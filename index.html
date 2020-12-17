@@ -237,30 +237,215 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
-                        <h1 class="ftco-heading heading-thin">More demo on image</h1>
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="0">
+                        <h1 class="ftco-heading heading-thin">What’s the change in the trade amount of China and the US with their primary business partners?</h1>
+                     </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-12 col-lg-12 mb-5">
                         <p>
-                            This is US top business partners
+                            Let's focus on the next question.
+                        </p>
+                        <p>
+                            Would China-US Trade War influence the trade with their primary business partners?
+                        </p>
+                        <p>
+                            To understand US and China primary business partners, we fisrt give a look at US and China top business trade partners by using the data from the United States Census website and China General Administration of Customs website.
+                            Here we remove the China-US trade as we want to focus on the impact on other business partners. Then, We aggregate the trade amount for each business partner and then create three leaderboards on import, export, and total trade amount.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100" style="text-align:center">
+                        <button id="button2" onclick="showUS()">U.S. Business Partners Leaderboard</button>
+                        <button id="button3" onclick="showChina()">China Business Partners Leaderboard</button>
+                    </div>
+                    <div id="genplot">
+                        <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                            <img src = "images/us_trade_partner.png" alt="" style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <p>
+                            From the above plots, we can easily learn the US/China primary trade partners.  
+                        </p>
+                        <p>
+                            As we can see from the U.S. leaderboard, <b>Canada, Mexico and Japan</b> are the top 3 trade partners with the US in import partners, export partners and total trade amoount partners. 
+                            On the other hand, <b>Japan, Hong Kong and South Korea</b> are the top 3 total trade amoount partners with China. 
+                            Besides, most of the top10 business partners in this three leaderboard are the same but in different rankings. 
+                        </p>
+                        <p>
+                            We then decide to look into top 10 import partners and top 10 export partners respectively by applying segmented regression analysis.
+                        </p>
+                        
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="ftco-heading heading-thin">Segmented Regression Analysis on U.S./China top 10 business partners</h2>
+                        <p>
+                            Similarly, just like the trade outbreak analysis, we focus our research on year <b>2016-2019</b>, which is also the main period of the trade war.
                         </p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
-                        <img src = "images/us_business_partners.png" alt="" style="width:100%">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
-                        <p>From the above plots, we can easily know the US primary trade partners. We then decide to look into top10 import partners and top10 export partners respectively.
+                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 3.7%">
+                        <p>We first look at the U.S. trade with its business partners.</p>
+                        <p>
+                            Given the plot, we can observe that for most of the import/export partners, the total trade amount increased when the time trade war started. 
+                            Also, for most of the U.S. import partner, <b>the overall total trade amount in post-trend are higher than pre-trend.</b>
                         </p>
+                        
                     </div>
-                </div>
+                    <div class="col-md-8 col-lg-8" data-aos="fade-up" data-aos-delay="0" >
+                        <p><b>ITS results for U.S. business partners</b></p>
+                        <select id="sel1" onchange="giveSelection(this.value)">
+                            <option value="i" selected>Import Partner</option>
+                            <option value="e">Export Partner</option>
+                          </select>
+                        <select id="sel2" onchange="$('#imageToSwap').attr('src', this.options[this.selectedIndex].value);">
+                            <option data-option="i" value="images/us_import_Canada.png" selected>Canada</option>
+                            <option data-option="i" value="images/us_import_France.png">France</option>
+                            <option data-option="i" value="images/us_import_Germany.png">Germany</option>
+                            <option data-option="i" value="images/us_import_Italy.png">Italy</option>
+                            <option data-option="i" value="images/us_import_Japan.png">Japan</option>
+                            <option data-option="i" value="images/us_import_Korea, South.png">South Korea</option>
+                            <option data-option="i" value="images/us_import_Malaysia.png">Malaysia</option>
+                            <option data-option="i" value="images/us_import_Mexico.png">Mexico</option>
+                            <option data-option="i" value="images/us_import_Taiwan.png">Taiwan</option>
+                            <option data-option="i" value="images/us_import_United Kingdom.png">UK</option>
+                            <option data-option="e" value="images/us_export_Brazil.png" >Brazil</option>
+                            <option data-option="e" value="images/us_export_Canada.png">Canada</option>
+                            <option data-option="e" value="images/us_export_France.png">France</option>
+                            <option data-option="e" value="images/us_export_Germany.png">Germany</option>
+                            <option data-option="e" value="images/us_export_Japan.png">Japan</option>
+                            <option data-option="e" value="images/us_export_Korea, South.png">South Korea</option>
+                            <option data-option="e" value="images/us_export_Mexico.png">Mexico</option>
+                            <option data-option="e" value="images/us_export_Netherlands.png">Netherlands</option>
+                            <option data-option="e" value="images/us_export_Taiwan.png">Taiwan</option>
+                            <option data-option="e" value="images/us_export_United Kingdom.png">UK</option>
+                        </select>
+                        <div>
+                            <img style='height: 100%; width: 100%; object-fit: contain' id="imageToSwap" class="profile" src="images/us_import_Canada.png">
+                        </div>
 
+                    </div>
+                    
+                </div>
+                <div class="row">
+                    <div class="col-md-8 col-lg-8" data-aos="fade-up" data-aos-delay="0" >
+                        <p><b>ITS results for China business partners</b></p>
+                        <select id="sel3" onchange="giveSelection2(this.value)">
+                            <option value="i" selected>Import Partner</option>
+                            <option value="e">Export Partner</option>
+                          </select>
+                        <select id="sel4" onchange="$('#imageToSwap2').attr('src', this.options[this.selectedIndex].value);">
+                            <option data-option="i" value="images/china_import_Australia.png" selected>Australia</option>
+                            <option data-option="i" value="images/china_import_Brazil.png">Brazil</option>
+                            <option data-option="i" value="images/china_import_China Taiwan.png">Taiwan</option>
+                            <option data-option="i" value="images/china_import_Germany.png">Germany</option>
+                            <option data-option="i" value="images/china_import_Japan.png">Japan</option>
+                            <option data-option="i" value="images/china_import_Korea,Rep..png">South Korea</option>
+                            <option data-option="i" value="images/china_import_Malaysia.png">Malaysia</option>
+                            <option data-option="i" value="images/china_import_Russian Federation.png">Russian</option>
+                            <option data-option="i" value="images/china_import_Thailand.png">Thailand</option>
+                            <option data-option="i" value="images/china_import_Viet Nam.png">Viet Nam</option>
+                            <option data-option="e" value="images/china_export_China Hong Kong.png" >HK</option>
+                            <option data-option="e" value="images/china_export_China Taiwan.png">Taiwan</option>
+                            <option data-option="e" value="images/china_export_Germany.png">Germany</option>
+                            <option data-option="e" value="images/china_export_India.png">India</option>
+                            <option data-option="e" value="images/china_export_Japan.png">Japan</option>
+                            <option data-option="e" value="images/china_export_Korea,Rep..png">South Korea</option>
+                            <option data-option="e" value="images/china_export_Netherlands.png">Netherlands</option>
+                            <option data-option="e" value="images/china_export_Singapore.png">Singapore</option>
+                            <option data-option="e" value="images/china_export_United Kingdom.png">UK</option>
+                            <option data-option="e" value="images/china_export_Viet Nam.png">Viet Nam</option>
+                        </select>
+                        <div>
+                            <img style='height: 100%; width: 100%; object-fit: contain' id="imageToSwap2" class="profile" src="images/china_import_Australia.png">
+                        </div>
+
+                    </div>
+                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 3.7%">
+                        <p>Then we turn to China's trade with its business partners.</p>
+                        <p>
+                            From the import ITS plots, <b>South Korea, Brazil, Japan and Germany </b>have seen their total imports to China decline over time after the trade war. 
+                            The rest of the world's imports have not changed much. 
+                            On the other hand, we can see that exports from China to other places are not affected much by the trade war, 
+                            except for India and Germany, where the export trade amount increased at the time of the incident but then declined. 
+                            <b>For all of China's export partners, the overall trade amount of exports was greater than before the trade war.</b> </p>
+                        
+                    </div>   
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <p>
+                            So, how can we know wich business partner has been affected by trade war the most? 
+                            And which business partner has little impact? 
+                            It seems hard to tell the answer straight away by looking through too many plots at the same time.
+                        </p>
+                        <p>
+                            Thus, to get a deeper look on impacts between different business partners, 
+                            we decide to focus on the difference between pre-trend and pos-trend trade amount on each US trade partners 
+                            by using the slope coefficient provided from segmented regression analysis report.
+                        </p> 
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <p>
+                            Let's start to see who gets more impact!
+                        </p>
+                        <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100" style="text-align:center">
+                            <button id="button2" onclick="USimpact()">Impact on US trade partners</button>
+                            <button id="button3" onclick="CHimpact()">Impact on China trade partners</button>
+                        </div>
+                        <div id="impactplot">
+                            <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                                <img src = "images/us_impact.png" alt="" style="width:100%">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <p>
+                            From the above plot, we can easily view the trade war impact on different business partners. 
+                        </p>
+                        <p>
+                            For US trade partners, <b>the trade war has more positive impact(impact>1.5) on its import partners: South Korea and Taiwan</b>, 
+                            and with slightly positive/negative impact on other business partners. 
+                            On the other side, most of the US export partners has small negative impacts.
+                            By compared to other trade partners, <b>Mexico and Canada gain more negative impacts</b>(impact>1.5) on their trade amount.
+                        </p>
+                        <p>
+                            For China import partners, <b>South Korea</b> has more negative impact and little positive/negative impact on other trade partners. 
+                            It is interesting to see that most of China's import trade partners have negative impacts. 
+                            Besides, as being China's export partners, 
+                            <b>United Kingdom and Singapore gains more influence from the trade war</b>. 
+                            The United Kingdom has more than 15 positive impact and Singapore has more than 5 positive impact. 
+                            For the rest of the export partners, they receive relatively small negative impact.
+                        </p>
+                        <p>
+                            To sum up, 
+                            the trade war between US and China <b>seems to not have a significant import/export trade amount impact 
+                            on most of their primary business partners</b>. 
+                            Being as the main two trade partners in the world, 
+                            it is less likely for other business partners to reduce their trade with the US and China.
+                        </p>
+                    </div>
+                </div>
                 <div class="row">
                     <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
-                        <h1 class="ftco-heading heading-thin">Demo on plotly..</h1>
+                        <h2 class="ftco-heading heading-thin">A whole picture of US & China trade with world business partners</h2>
                         <p>
-                            Now, let us put some plotly image
+                            In order to better understand the trade relationship between other countries and the US and China, 
+                            we have drawn a world map here, representing from 1996 to 2018, 
+                            whether each country has more total trade amount with the US or China.
                         </p>
                     </div>
                 </div>
@@ -268,15 +453,14 @@
                     <div class="col-md-12 col-lg-12">
                         <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/world_map.html" height="600" width="100%"></iframe>
                     </div>
+                    <p>
+                        We can see that from the beginning, the toal trade amount with U.S. was greater than China's in almost every region. 
+                        However, China rise rapidly during the next few years and become one of the top economies in the world today.
+                    </p>
                 </div>
+
+
                 
-                <div class="row">
-                   <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100"> 
-                        <p>To add plotly, be sure to change plotly to html ( <I>plotly.offline.plot(fig, filename='world_map.html', image_width=100, image_height=100)</I> )
-                            and put the html to file plotly.
-                        </p>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- END section -->        
@@ -338,67 +522,57 @@
         </script>
         
         <script>
-        function showmar() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/311.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        function showUS() {
+          document.getElementById("genplot").innerHTML = '<img src = "images/us_trade_partner.png" alt="" style="width:100%">';
         }
         </script>
-    
 
-        
         <script>
-        function showgen() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/316.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
+        function showChina() {
+        document.getElementById("genplot").innerHTML = '<img src = "images/china_trade_partner.png" alt="" style="width:100%">';
         }
         </script>
-        
         <script>
-        function showbeh() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/372.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
-        </script>
-        
+            function CHimpact() {
+            document.getElementById("impactplot").innerHTML = '<img src = "images/china_impact.png" alt="" style="width:100%">';
+            }
+            </script>
+
         <script>
-        function showcit() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/324.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
+            function USimpact() {
+            document.getElementById("impactplot").innerHTML = '<img src = "images/us_impact.png" alt="" style="width:100%">';
+            }
         </script>
-        
+
+
         <script>
-        function showocc() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/332.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
+            var sel1 = document.querySelector('#sel1');
+            var sel2 = document.querySelector('#sel2');
+            var options2 = sel2.querySelectorAll('option');
+            var sel3 = document.querySelector('#sel3');
+            var sel4 = document.querySelector('#sel4');
+            var options4 = sel4.querySelectorAll('option');
+
+            function giveSelection(selValue) {
+            sel2.innerHTML = '';
+            for(var i = 0; i < options2.length; i++) {
+                if(options2[i].dataset.option === selValue) {
+                sel2.appendChild(options2[i]);
+                }
+            }
+            }
+            function giveSelection2(selValue) {
+            sel4.innerHTML = '';
+            for(var i = 0; i < options4.length; i++) {
+                if(options4[i].dataset.option === selValue) {
+                sel4.appendChild(options4[i]);
+                }
+            }
+            }
+
+            giveSelection(sel1.value);
+            giveSelection(sel3.value);
         </script>
-        
-        <script>
-        function showedu() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/334.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
-        </script>
-        
-        <script>
-        function showhei() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/342.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
-        </script>
-        
-        <script>
-        function showwei() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/354.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
-        </script>
-        
-        <script>
-        function showeye() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/368.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
-        </script>
-        
-        <script>
-        function showhair() {
-          document.getElementById("genplot").innerHTML = '<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~schmider/370.embed?showlink=false&modebar=false" height="525" width="100%"></iframe>';
-        }
-        </script>
-        
         
         
         <script>
