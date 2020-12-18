@@ -549,50 +549,94 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="0">
-                        <h1 class="ftco-heading heading-thin">Which industry/sector has undergone the most severe decline in the trade war?</h1>
-                     </div>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-md-12 col-lg-12">
-                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/exports.html" height="600" width="100%"></iframe>
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="ftco-heading heading-thin">Segmented Regression Analysis on U.S Imports/Exports of different industries</h2>
+                        <p>
+                            We choose the SIC(Standard Industrial Classification) to classify the goods into 10 categories. And analysis them using ITS method respectively.
+                        </p>
                     </div>
                 </div>
-                <div class="row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-md-12 col-lg-12">
-                        <iframe name="mapiframe" id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="plotly/imports.html" height="600" width="100%"></iframe>
+                <div class="row">
+                    <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 3.7%">
+                        <p><i>Choose imports or exports for any industry</i></p>
+                        <p>
+                            The ITS results we got shown besides are the plots after reducing the noise as most as possible, by the method such as removing out the seasonality or removing outliers.
+                        </p>
+                        <p>
+                            Special attention to the exports of catogory <b>Beverage and Tobacco</b> Before the trade war began, it has got a seasonal pattern and it reaches a peak at a certain time every year.
+                            But after the trade war began, the exports didn't reach a peak again at the same time in the next year. We may assume that 
+                            the trade war still has had some impact on the market of Beverage and Tabacco. But Whether or not this is truly related to trade war
+                            and the reasons behind may become clear if have a longer period after trade war to study without the infection of Pandemic can be studied.
+                            Other categories such as <b>Crude Materials, Inedibles, Except Fuels</b> and <b> Animal and vegetable Oils, Fats and Waxes</b> have similar changes as well.
+                        </p>
+                        <p>
+                            For the U.S imports from China, most of the catogories have been negatively affected in a long run, which can be observed by the obvious change of slope after 2018-03.
+                        </p>
+                        
                     </div>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-md-12 col-lg-12 mb-5">
-                        <p>
-                            We have observed that:
-                        </p>
-                        <p>
-                            1. We could see approximately that the overall trend(sum over all catogories) is consistent with the result we got from before.
-                        </p>
-                        <p>
-                            2. For both imports and exports parts, among all the different sectors, the category `Machinery and transport equipment` has contributed the largest part. 
-                        </p>
-                        <p>
-                                - For US imports to China: 
-                        </p>
-                        <p>
-                                The goods of kind `Crude Materials, Inedible, Exept Fuels` is at the second place. 
-                                Especially, it has an obvious seasonal pattern of approximately 1 year and the peak always appears in October. 
-                                However, we could see that the peak does not happen again in October 2019, after the trade war begins. 
-                                The goods `Chemicals and related products` , `Miscellaneous and manufactured articles` and `MINERAL FUELS, LUBRICANTS AND RELATED MATERIALS` follow, etc...
-                        </p>
-                        <p>
-                                - For US exports from China: 
-                        </p>
-                        <p>
-                                The second most goods are `MISCELLANEOUS MANUFACTURED ARTICLES` instead. 
-                                The goods `Miscellaneous and manufactured articles` and `MANUFACTURED GOODS CLASSIFIED CHIEFLY BY MATERIAL` follow...
-                         </p>
-                         <p>
-                                And we could also observe a 1-year seasonal pattern whose peak is also always in around October for the goods `Machinery and transport equipment` 
-                         </p>
+
+                    <div class="col-md-8 col-lg-8" data-aos="fade-up" data-aos-delay="0" >
+                        <p><b>ITS results for trades in different industries</b></p>
+                        <select id="sel5" onchange="giveSelection3(this.value)">
+                            <option value="i" selected>Imports</option>
+                            <option value="e">Exports</option>
+                          </select>
+                        <select id="sel6" onchange="$('#imageToSwap3').attr('src', this.options[this.selectedIndex].value);">
+                            <option data-option="i" value="images/ITS_im_1.png" selected>Food and Live Animals</option>
+                            <option data-option="i" value="images/ITS_im_2.png">Beverage and Tobacco</option>
+                            <option data-option="i" value="images/ITS_im_3.png">Crude Materials, Inedibles, Except Fuels</option>
+                            <option data-option="i" value="images/ITS_im_4.png">Mineral Fuels, Lubricants and Other related Materials</option>
+                            <option data-option="i" value="images/ITS_im_5.png">Animal and vegetable Oils, Fats and Waxes</option>
+                            <option data-option="i" value="images/ITS_im_6.png">Chemicals and Related Products</option>
+                            <option data-option="i" value="images/ITS_im_7.png">Manifatured Goods Classified Chiefly by Material</option>
+                            <option data-option="i" value="images/ITS_im_8.png">Machinery and Transport Equipment</option>
+                            <option data-option="i" value="images/ITS_im_9.png">Miscellaneous Manufactured Articles</option>
+                            <option data-option="i" value="images/ITS_im_10.png">Others(Not classified)</option>
+                            <option data-option="e" value="images/ITS_im_1.png">Food and Live Animals</option>
+                            <option data-option="e" value="images/ITS_ex_2.png" >Beverage and Tobacco</option>
+                            <option data-option="e" value="images/ITS_ex_3.png">Crude Materials, Inedibles, Except Fuels</option>
+                            <option data-option="e" value="images/ITS_ex_4.png">Mineral Fuels, Lubricants and Other related Materials</option>
+                            <option data-option="e" value="images/ITS_ex_5.png">Animal and vegetable Oils, Fats and Waxes</option>
+                            <option data-option="e" value="images/ITS_ex_6.png">Chemicals and Related Products</option>
+                            <option data-option="e" value="images/ITS_ex_7.png">Manifatured Goods Classified Chiefly by Material</option>
+                            <option data-option="e" value="images/ITS_ex_8.png">Machinery and Transport Equipment</option>
+                            <option data-option="e" value="images/ITS_ex_9.png">Miscellaneous Manufactured Articles</option>
+                            <option data-option="e" value="images/ITS_ex_10.png">Others(Not classified)</option>
+                        </select>
+                        <div>
+                            <img style='height: 100%; width: 100%; object-fit: contain' id="imageToSwap3" class="profile" src="images/ITS_im_1.png">
+                        </div>
+
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="ftco-heading heading-thin">Observation of Impact on Different Industries In a Quantified Way </h2>
+                            <p>
+                                <i>Click on the upper-left botton Exports/Imports to see individual sorting.</i>
+                            </p>
+                            
+                        </div>
+                    <div class="row" data-aos="fade-up" data-aos-delay="200">
+                        <div class="col-md-6">
+                            <img src="plotly/impact_industries.html" alt="" class =“right” style="width:100%">
+                    </div>
+                    <div class="row" data-aos="fade-up" data-aos-delay="100">
+                        <div class="col-md-12 col-lg-12 mb-5">
+                            <p>
+                                The impact is almost mutually negative for different kinds of industries for either imports or exports. 
+
+                            </p>
+                            <p>
+                                <b>Comparing the impact over different industries</b>,
+                                 the most negative impact is on <b>animals and vegetable oils, fats and waxes</b> 
+                                 among both exports and imports, and for imports especially. 
+                                 The category <b>beverages and tobacco</b> has the least impact, for both exports and imports.
+                            </p>
+                            <p>
+                                <b>Comparing impact on exports and imports</b>, the imports of the U.S is influenced more by the trade war than the exports.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 
@@ -690,6 +734,9 @@
             var sel3 = document.querySelector('#sel3');
             var sel4 = document.querySelector('#sel4');
             var options4 = sel4.querySelectorAll('option');
+            var sel5 = document.querySelector('#sel5');
+            var sel6 = document.querySelector('#sel6');
+            var options6 = sel6.querySelectorAll('option');
 
             function giveSelection(selValue) {
             sel2.innerHTML = '';
@@ -707,9 +754,18 @@
                 }
             }
             }
+            function giveSelection3(selValue) {
+            sel6.innerHTML = '';
+            for(var i = 0; i < options6.length; i++) {
+                if(options6[i].dataset.option === selValue) {
+                sel6.appendChild(options6[i]);
+                }
+            }
+            }
 
             giveSelection(sel1.value);
             giveSelection(sel3.value);
+            giveSelection(sel5.value);
         </script>
         
         
