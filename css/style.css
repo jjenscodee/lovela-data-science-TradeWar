@@ -8659,3 +8659,7 @@ ul.dashed > li:before {
   content: "- ";
   text-indent: -5px;
 }
+.panel-body {
+  display: flex;
+  justify-content: space-between;
+}
