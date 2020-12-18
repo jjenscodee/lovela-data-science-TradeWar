@@ -85,7 +85,7 @@
                 <div class="row">
                     <div class="col-md-12  mb-3" data-aos="fade-up">
                         <p class="mb-4">
-                            Since the paper introduces interrupted time series (ITS) analysis as a practical method for event’s impact evaluation, we propose to study if we can apply ITS analysis to a different scenario: 
+                            Since the paper introduces interrupted time series (ITS) analysis as a practical method for event impact evaluation, we propose to study if we can apply ITS analysis to a different scenario: 
                         </p>
                     </div>
                     <div class="col-md-12  mb-5" data-aos="fade-up">
@@ -120,9 +120,9 @@
                              </a>
                         </div>
                         <p>    
-                            We then use ITS analysis on these datasets and see if there exists a significant impact on China-US trade. 
+                            We then use ITS analysis on these datasets and see if there exists a significant impact on the China-US trade. 
                             Given that the U.S. took actions to apply tariffs on Chinese goods on <b>March 2018</b> for the first time, we chose it as the trade war event intervention in our analysis.
-                            Moreover, we try to extend the ITS analysis method to better interpret multiple events and other factors. 
+                            Moreover, we try to extend the ITS analysis method to better interpret multiple objects of study and other factors, including different business partners, industries, and seasonality effect.
                             The visualization of analysis will allow us to understand the economic outcomes easily. 
                         </p>
                     </div>
@@ -133,7 +133,7 @@
                 <div class="row">
                     <div class="col-md-12  mb-5" data-aos="fade-up" data-aos-delay="100">
                         <h1 class="ftco-heading heading-thin">Our Goal</h1>
-                        <p>Our main goal is to find out <b>How does the trade war affect the bilateral trade (i.e., exports, imports) between China and the US？ Which country's products are more competitive？</b>
+                        <p>Our main goal is to find out <b>How does the trade war affect the bilateral trade (i.e., exports, imports) between China and the US？ </b>
                         </p>
                         <p>we are also interested in investigating further into other aspects of the trade war: 
                         </p>
@@ -148,7 +148,7 @@
                 
                 <div class="row">
                     <div class="col-md-12 mb-5" data-aos="fade-up">
-                      <p>All these results would provide us with a deeper understanding of the impacts of the trade war, and we would try to interpret them from different perspectives.
+                      <p>All these results would provide us with a broader and deeper understanding of the impacts of the trade war, and we would try to interpret them from different perspectives.
                     </p>
                     </div>
                 </div>
@@ -163,7 +163,7 @@
                     <div class="row align-items-center ftco-vh-100" >
                         <div class="col-md-12">
                             <h1 class="ftco-heading heading-thin mb-5" data-aos="fade-up" data-aos-delay="100" style="color:ghostwhite; opacity: 1">
-                                Data Stories begin
+                                Data Stories begins
                             </h1>
                         </div>
                     </div>
@@ -177,13 +177,13 @@
            <div class="container">
                 <div class="row">
                     <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="0">
-                        <h1 class="ftco-heading heading-thin">How does the trade war affect the bilateral trade between China and the US?</h1>
+                        <h1 class="ftco-heading heading-thin">How does the trade war affect the China-US bilateral trade?</h1>
                      </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4  mb-5" data-aos="fade-up" data-aos-delay="0" style="margin-top: 3.7%">
                         <p>We first look at the data from the United States Census website by plotting the trend of the bilateral trade, from 2016 to 2020.</p>
-                        <p>Given the plot, we can observe that:</p>
+                        <p>Given the plot, we can observe the facts:</p>
                         <ul>
                             <li>US imports from China are much higher than its exports. The <b>US trade deficit</b> in bilateral trade is approximately 30 billion dollars per month.</li>
                             <li>U.S. imports from China fluctuate greatly each month and show a certain degree of <b>cyclical characteristics</b>.</li>
@@ -226,6 +226,46 @@
 
                 <div class="row">
                     <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <h2 class="ftco-heading heading-thin">Trade war outbreak analysis: Segmented Regression Analysis</h2>
+                        <p>
+                            Finally, we can implement segmented regression analysis without considering other factors that may affect our interpretations.
+                        </p>
+                        
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="200">
+                    <div class="col-md-6">
+                        <img src="images/us_to_china.png" alt="" class =“right” style="width:100%">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/china_to_us.png" alt="" style="width:100%">
+                    </div>
+                </div>
+                <div class="row" data-aos="fade-up" data-aos-delay="100" style="margin-top: 2.5%">
+                    <div class="col-md-12 col-lg-12 mb-5">
+                        <p>
+                            First of all, from the regression results, we can see that the trade war has statistically significant impact on U.S. exports to China, 
+                            both immediately and in the long term.
+                        </p>
+                        <p>
+                            Before the trade war, 
+                            the exports stably increase with the coefficient of time_feature is around 129.18. 
+                            However, the intervetion's coefficient (-1382.35) and postslope's coefficient (-213.64), 
+                            indicating that <b>the intervention not only immediately reduced the export value, 
+                            but also showed a downward trend in the next two years.</b>
+                        </p>
+                        <p>
+                            On the other hand, 
+                            the result on U.S. imports from China has a certain degree of difference with the exports. 
+                            We can conclude that <b>the imports from China has both higher increasing trend before the trade war</b> (with coefficient 304.95) 
+                            and <b>more severe downward trend </b>(with coefficient -905.92) <b>after the trade war. </b>
+                            From this perspective, Chinese products are more severely impacted by the trade war.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
                         <h2 class="ftco-heading heading-thin">Trade war outbreak analysis: With global trade as comparator group</h2>
                     </div>
                 </div>
@@ -244,17 +284,15 @@
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-md-12 col-lg-12 mb-5">
                         <p>
-                            Clearly, the global trade did not immediately experience the negative effects of the trade war, for the intervention's coefficients are positive (21.12 and 34.23 respectively). 
-                            However, the long-term negative effect exists in the regression results (with negative postslope's coefficients).
+                            Given our regression analysis results, the global trade did not immediately experience the negative effects of the trade war.
+                            However, the <b> long-term negative effect </b> exists in the regression results, which is the similar in China-US Bilateral trade.
                         </p>
                         <p>
                             Does this overturn our previous conclusion in China-US Trade Trend?
+                            Not exactly, because the <b> long-term effect is less noticeable</b> than the impact discovered China-US trade relationships, which could be justified in the coefficient and the following plots.
                         </p>
                         <p>
-                            Not exactly, because the long-term effect is less noticeable than the impact discovered China-US trade relationships.
-                        </p>
-                        <p>
-                            Let's now see the plot below that can better reflect the difference in both the immediate/long-term impact on China-US bilateral trade and the international market:
+                            Let's now see the plot below that can better reflect the difference in both the immediate/long-term impact on <span style="color:rgb(170, 25, 25)">China-US Bilateral Trade</span> and the <span style="color:rgb(30, 70, 145)">International Market</span>:
                         </p>
                     </div>
                 </div>
@@ -268,60 +306,20 @@
                 </div>
                 <div class="row"><div class="col-md-12 col-lg-12 mb-5"></div></div>
 
-                <div class="row">
-                    <div class="col-md-12  mb-3" data-aos="fade-up" data-aos-delay="100">
-                        <h2 class="ftco-heading heading-thin">Trade war outbreak analysis: Segmented Regression Analysis</h2>
-                        <p>
-                            Finally, we can implement segmented regression analysis without considering other factors that may affect our interpretations.
-                        </p>
-                        
-                    </div>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-md-6">
-                        <img src="images/us_to_china.png" alt="" class =“right” style="width:100%">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="images/china_to_us.png" alt="" style="width:100%">
-                    </div>
-                </div>
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-md-12 col-lg-12 mb-5">
                         <p>
-                            First of all, from the regression results, we can see that the trade war has statistically significant impact on U.S. exports to China, 
-                            both immediately and in the long term.
-                        </p>
-                        <p>
-                            Before the trade war, 
-                            the exports stably increase with the coefficient of time_feature is around 129.18. 
-                            However, the intervetion's coefficient(-1382.35) and postslope's coefficient(-213.64), 
-                            indicating that <b>the intervention not only immediately reduced the export value, 
-                            but also showed a downward trend in the next two years.</b>
-                        </p>
-                        <p>
-                            On the other hand, 
-                            the result on U.S. imports from China has a certain degree of difference with the exports. 
-                            We can conclude that <b>the imports from China has both higher increasing trend before the trade war</b> (with coefficient 304.95) 
-                            and <b>more severe downward trend </b>(with coefficient -905.92) <b>after the trade war. </b>
-                        </p>
-                    </div>
-                </div>
-                <div class="row" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-md-12 col-lg-12 mb-5">
-                        <p>
-                            Here we will give some conclusions before going to the next question.
+                            Here we can draw some conclusions for the first question, trade war effects on the bilateral trade:
                         </p>
                         <p>
                             Though the global economy is in a slump started from the year 2018, 
-                            <b>the impact of the U.S.- China trade war on their bilateral trade is much greater</b>than the impact of the global economic downturn.</p>
-                        <p>
-                            However, is it the trade war between the U.S. and China that cause the global economic downturns 
-                            or the rise in protectionism that cause this US-China trade war, 
-                            and the global trade amount decreases? 
-                            <b>The cause-effect relationship is difficult to analyze by applying segmented regression analysis. </b>
+                            <b>the impact of the U.S.- China trade war on their bilateral trade is much greater</b> than the impact of the global economic downturn.
+                            However, is it the trade war between the U.S. and China that cause the <i>global economic downturns</i>
+                            or the rise in <i>trade protectionism</i> in this downturn leads to the trade war outbreak?
+                            <b>The real causality is difficult to concluded by simply applying segmented regression analysis. </b>
                         </p>
                         <p>
-                            Despite the limitation of segmented regression analysis, we can still observe some interesting phenomenon from it. 
+                            Despite the limitation of segmented regression analysis, we can still observe some interesting phenomenon from it:
                         </p>
                         <p>
                             <b>There is a time delay in the immediate impact on Chinese exports to the US </b>
@@ -331,11 +329,11 @@
                             but the |postslope's coefficient| in US exports to Chinese is only two times more than |preslope's coefficient|.
                         </p>
                         <p>
-                            Although the U.S. data shows a larger bilateral deficit with China,
+                            Although the U.S. presents more severe bilateral deficit in the trade with China,
                             if we consider the imports and exports respectively, 
                             <b>China loses more in the trade war </b>
                             because the difference of China's exports between pre-war and post-war reduce more than US's exports,
-                            which indicates that China has greater loss.
+                            indicating a greater loss.
                         </p>
                     </div>
                 </div>
